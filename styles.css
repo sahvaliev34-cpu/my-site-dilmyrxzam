@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(  https://i.pinimg.com/1200x/50/af/24/50af24acf429877badf0bd66c957dcc6.jpg    ) no-repeat center/ cover;
+    padding: 50px 5%;
+}
+
+.container {
+    background: rgba(255, 255, 255, .1);
+    position: relative;
+    height: 100%;
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 2.);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+
+
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-color: #fff;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    animation-delay: 1.5s;
+    color: #fff;
+}
+
+.home-detail h1 {
+    font-size: 55px;
+    line-height: 1;
+}
+
+.home-detail h2 {
+    font-size: 32px;
+
+}
+
+.home-detail p {
+    margin: 10px 0 20px;
+}
+
+.home-detail .download-social {
+     display: flex;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+
+}
+
+.btn:hover {
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+
+}
+
+.home-detail .social-icons {
+    margin-left: 20px;
+}
+
+.home-detail .social-icons a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid#fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home-detail .social-icons a:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+/* ======== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ======== */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 3%;
+    }
+
+    .container {
+        border-radius: 20px;
+    }
+
+    header {
+        padding: 20px 3%;
+    }
+
+    .navbar a {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .home {
+        flex-direction: column; /* СТАВИТ БЛОКИ В СТОЛБИК */
+        text-align: center;
+        gap: 20px;
+        padding: 100px 3% 40px;
+    }
+
+    .home-detail h1 {
+        font-size: 35px;
+    }
+
+    .home-detail h2 {
+        font-size: 22px;
+    }
+
+    .home-detail p {
+        font-size: 15px;
+    }
+
+    .home-detail .download-social {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .home-detail .social-icons {
+        margin-left: 0;
+    }
+
+    .home-detail .social-icons a {
+        font-size: 18px;
+        padding: 6px;
+        margin: 0 5px;
+    }
+
+    .home-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-box {
+        width: 230px;
+        height: 230px;
+    }
+}
